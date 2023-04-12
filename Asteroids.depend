@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1660658839 source:c:\users\danib\desktop\projetos - linguagem c\asteroids\main.c
+	<stdlib.h>
+	<stdio.h>
+	<conio.h>
+	<time.h>
+	<math.h>
+	<mysql.h>
+	<string.h>
+	<allegro5/allegro.h>
+	<allegro5/allegro_ttf.h>
+	<allegro5/allegro_font.h>
+	<allegro5/allegro_native_dialog.h>
+	<allegro5/allegro_primitives.h>
+
