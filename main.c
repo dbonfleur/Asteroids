@@ -289,17 +289,6 @@ int ini_alle() {
         al_destroy_event_queue(fila_eventos);
         return 0;
     }
-    bilunave=al_load_bitmap("imagens/etbilu.png");
-    if (!bilunave){
-        error_msg("Falha ao caregar aste3.png");
-        al_destroy_display(janela);
-        al_destroy_font(fonte24);
-        al_destroy_font(fonte48);
-        al_destroy_font(fonte70);
-        al_destroy_font(fonte90);
-        al_destroy_event_queue(fila_eventos);
-        return 0;
-    }
     al_set_window_title(janela, "Asteroids");
     al_set_window_position(janela,0,0);
     al_register_event_source(fila_eventos, al_get_mouse_event_source());
@@ -730,6 +719,7 @@ void acao_disparo() {
 
 void propulcao() {
     int cy=36;
+    int cx=38;
     if(movi.flag_acelera) {
         if(movi.cont_acelera==1) {
             prop=al_load_bitmap("imagens/prop1.png");
@@ -832,7 +822,7 @@ void destroi_nave(int num_aste) {
 
 void euclidiana(float *pi1, float *pj1, float *pi2, float *pj2, int num_tiro, int num_aste, int nave) {
     float dist, cat1, cat2;
-    if(*pi1>*pi1) {
+    if(*pi1 > *pi1) {
         if(*pj1>*pj2) {
             cat1=*pi1-*pi2;
             cat2=*pj1-*pj2;
@@ -1488,6 +1478,7 @@ int recordes() {
 }
 
 int menu() {
+    int opc;
     switch(opc_menu) {
         case 0:
             al_clear_to_color(al_map_rgb(0,0,0));
